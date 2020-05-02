@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <ul id = "container">
+        <div>
+            <h4 id="name">
+                {{name}}
+            </h4>
+            <p>
+                Address: {{address}}
+            </p>  
+            <ul id = "starboard">
+                {%for star in range(1, rest_stars)%}
+                    <li id = "star"></li>
+                {%endfor%}
+            </ul> 
+            <br/>
+            <ul id = "suggest">
+                <br/>
+                <h6>
+                    Also try out:
+                </h6>
+                {%for res in suggested%}
+                    <li id = "suggestion">
+                        <a class = "btn" href="#">{{res.name}} <br/>
+                        <h6>{{res.count}} reviews • {{res.stars}} stars • {{res.address}}</h6>
+                        </a>   
+                    </li>
+                {%endfor%}
+            </ul>
+            
+        </div>
+           
+        <div>
+            <ul id = "revrow">
+                <li id = "rev">
+                    <h2>reviews:</h2>
+                    <h1>{{rev_count}}</h1>
+                   
+                </li>
+                    
+                <li id = "rev">
+                    <h3>
+                        {{review}}
+                        <br/>
+                    </h3>
+                    
+                    <h2>
+                        review from:&nbsp;
+                        {{reviewer}}&nbsp;
+                    </h2>
+                    
+                    <ul id = "starboard">
+                        {%for stars in range(1,rev_stars)%} 
+                            <li id = "star"></li>
+                        {%endfor%}
+                    </ul>
+                </li>
+            </ul>
+            <ul id = "row">
+                <li id = "food1" class = "textOver">
+                    <h5>{{cap0}}</h5>
+                </li>
+                <li id = "food2" class = "textOver">
+                    <h5>{{cap1}}</h5>
+                </li>
+            </ul>
+        </div>
+    </ul>
+
+    <br/>
+    
+
+</body>
+</html>

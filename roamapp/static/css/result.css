@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    font-family: serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: ivory;
+    height: 100%;
+    width: 100%;
+}
+
+ul[id = container] {
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    background-color: ivory;
+    background-image: url(../img/diningroam.png);
+    background-size: cover;
+    list-style-type: none;
+}
+
+ul[id = suggest] {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    opacity: 1;
+    height:auto;
+}
+
+div {
+    width: 45%;
+    min-width: 400px;
+    min-height: 600px;
+    height: 70%;
+    margin:auto;
+    padding:0;
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    height: 100%;
+    width: 100%;
+}
+
+p{
+
+    background-color: transparent;
+    height: auto;
+    font-family: 'Raleway', 'serif';
+    font-size: 1.2em;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    position: relative;
+    width:auto;
+    margin: auto;
+    padding:auto;
+    
+}
+
+
+
+
+ul[id = starboard] {
+    margin-top: 0;
+    margin:0;
+    height: 10%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 2%;
+    background-color: transparent;
+}
+
+
+ul[id = row] {
+    width:auto;
+    height:50%;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: ivory;
+    
+}
+
+ul[id = revrow] {
+    width:auto;
+    height:50%;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: ivory;
+   
+}
+
+li[id = suggestion] {
+    color: white;
+    background-color:transparent;
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    margin: auto;
+    padding: 2%;
+    height: auto;
+}
+
+.textOver:hover h5 {
+    display: inline-block;
+    margin-top: 30%;
+    font-family: 'Raleway', sans-serif;
+    top: 50%;
+    font-weight: bolder;
+    background-color: coral;
+    opacity: 1;
+}
+
+.textOver:after h5 {
+    color:transparent;
+    transition: 0s;
+} 
+
+.textOver{
+    margin-top: 30%;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    font-size: 3em;
+    color: transparent;
+    text-align: center;
+    transition: 0.8s;
+}
+
+.textOver:hover {
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    background-color: coral;
+    opacity:.8;
+    color: white;
+    transition: 0.5s;
+}
+
+.textOver:hover :not(h5) {
+    opacity:.8;
+}
+
+
+
+.btn {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    height: 10%;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Raleway', 'serif';
+    font-size: 1.2em;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+
+
+.btn:hover, .btn:active{
+    background-color: white;
+    color:coral;
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.btn h6 {
+    color:lightgray;
+}
+
+.btn:hover h6 {
+    color: coral;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+li[id = rev] {
+    background-color: ivory;
+    border-style: hidden;
+    height: 100%;
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+li[id = star] {
+    margin: 1%;
+    background-image: url(../img/star.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+li[id = food1] {
+    background-image: url(../img/photo1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    transition: 0.5s;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    height: 99%;
+    width: 50%;
+    min-height: 200px;
+    min-width: 250px;
+
+
+}
+
+
+li[id = food2] {
+    background-image: url(../img/photo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-align: center;
+    color:transparent;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 99%;
+    width: 50%;
+    min-width: 250px;
+    min-height: 200px;
+
+
+}
+
+h1 {
+    font-family: 'Raleway', 'serif';
+    font-size: 8em;
+    display: inline;
+    color: black;
+    text-align: middle;
+    padding: 0;
+}
+
+h2 {
+    background-color:transparent;
+    height: auto;
+    margin: 0;
+    font-family: 'Raleway', 'serif';
+    font-size: 1.5em;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+    padding:0;
+}
+
+h3 {
+    height:auto;
+    margin-top: 5px;
+    padding:0;
+    font-size: medium;
+    font-family: 'Raleway', 'serif';
+    font-weight: 300;
+    color: black;
+    background-color: ivory;
+    text-align: left;
+    overflow: scroll;
+    
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    width:100%;
+    height: 10%;
+    background-color: transparent;
+    color: black;
+  
+}
+
+
+h5 {
+    display: none;
+    color: white;
+    font-size: 1em;
+    overflow: scroll;
+}
+
+h6 {
+    color: white;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    height:auto;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 1%;
+}
+
+@media only screen and (max-width: 1300px) {
+    ul[id = row] {
+        min-width: 500px;
+    }   
+    ul[id = revrow] {
+        min-width: 500px;
+    }
+    h1 {
+        font-size: 8em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: .8 em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    ul[id = container] {
+        flex-direction: column;
+    }
+    p {
+        margin-top: 10%;
+    }
+    div {
+        margin-top: 15%;
+    }
+    ul[id = revrow] {
+        margin-top: 10%;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        min-width: 0;
+    }
+    ul[id = row] {
+        min-width: 0;
+    }
+    li[id=rev] {
+        height: auto;
+        width: 100%;
+       
+    }
+    li[id = food1]{
+        min-width: 0;
+    }
+    li[id = food2] {
+        min-width: 0;
+    }
+    
+    li[id = suggestion] {
+        color:black;
+    }
+    ul[id=starboard] {
+        position: relative;
+        height: 15%;
+        margin-bottom: 5%;
+    }
+    li[id = star] {
+        height: 100%;
+        margin: 5%;
+        padding:auto;
+    }
+    h1 {
+        font-size: 6em;
+    }
+    h2 {
+        background-color: black;
+        color: white;
+        text-align: end;
+        font-size: 1.5em;
+    }
+    h3 {
+        overflow: hidden;
+        text-align: left;
+        padding: 5% 0%;
+        font-size: 1em;
+        overflow: scroll;
+    }
+    h4[id = name] {
+        font-size: 1.5em;
+    }
+    h5{
+        font-size: .5em;
+    }
+    .btn h6 {
+        font-size: .7em;
+    }
+}

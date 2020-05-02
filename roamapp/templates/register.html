@@ -1,0 +1,43 @@
+{% extends "entry.html" %}
+{% block bodyreg %}
+    <br/>
+    <br/>
+    <h3>Please enter your details for registration</h3>
+    <form action="{{ url_for('register') }}" method="post">
+        <dl>
+            
+            <li>
+                <dd><input type="text" name="username" placeholder="email"></dd>
+            </li>
+            <li>
+                <dd><input type="password" name="password" placeholder = "password"></dd>
+            </li>
+            <li>
+                <dd><input type="password" name="confirm_password", placeholder="confirm password"></dd>
+            </li>
+           
+                <div class="category">
+                    Password Requirements:
+                    <ul>
+                        <li id = "spec">At least 1 Upper-Case Letter</li>
+                        <li id = "spec">At least 1 Lower-Case Letter</li>
+                        <li id = "spec">At least 1 Number</li>
+                        <li id = "spec">At least 1 Special Character</li>
+                        <li id = "spec">More than 8 Characters</li>
+                    </ul>
+                </div>
+                {% if error %}
+                    <p id = "err">{{error}}</p> 
+                    <br>
+                {% endif %}    
+        </dl>
+        <input type="submit" value="Register" class = "btn">
+        <br/>
+        <p>
+            Already a member?
+            <a id = "cancel" class="btn" href="login#">Cancel</button>
+        </p>
+    </form>
+    
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "entry.html" %}
+
+{% block bodylog%}
+    
+        <form action="{{ url_for('login') }}" method="post">
+            <li id = "field">
+                <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                <dd><input type="text" name="username" placeholder="username or email"></dd>
+            </li>
+            <br/>
+            <li id = "field">
+                <i class="fa fa-lock fa-3x" aria-hidden="true" aria-setsize=100px></i>
+                <dd><input type="password" name="password" placeholder = "password"></dd>
+            </li>
+            
+            <li>
+                 <input type="submit" value="Login" class = "btn" href = "/home">
+            </li>
+               
+            {% if error %}
+                <p id = "err">{{error}}</p> 
+            {% endif %}   
+            
+            <p>
+                Not a member yet?
+                <a class = "btn" href="/register">Register here</a>
+            </p>
+            
+        </form>
+    
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block initbutton %}
+    {{button}}
+{% endblock %}
+
+{% block whereto%}
+    {{dest}}
+{% endblock %}
+
+{%block params%}
+    <li id = "field">
+        <dt>Cuisine:</dt>
+        <dd><input type="text" size="30" name="cuisine"></dd>
+    </li>
+    <li id = "field">
+        <dt>City:</dt>
+        <dd><input type="text" size="30" name="city"></dd>
+    </li>
+    <li id = "field">
+        <dt>Day of the week:</dt>
+        <dd><input type="text" size="10" name="dow"></dd>
+    </li>
+    <li id = "field">
+        <dt>Time:</dt>
+        <dd><input type="time" size="10" name= "time"></dd>
+    </li>
+    <li id = "field">
+        {% if error %}
+            <p id = "err">{{error}}</p> 
+        {% endif %}   
+    </li>
+    <li id = "field">
+        <input type="submit" value="Search" class="btn" href=result#>  
+    </li>
+
+   
+{%endblock%}
+      

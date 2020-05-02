@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+
+
+
+{% block initbutton %}
+    {{button}}
+{% endblock %}
+
+{% block whereto%}
+    {{dest}}
+{% endblock %}
+
+{%if best_city%}
+    {%block toprated%}
+    <ul>
+        {%for res in best_city%}
+            <li class = "thumbnail">
+                <img src="../static/img/res.png" alt="">
+                <div class =  "info">
+                    <p>
+                        {{res.name}}&nbsp;
+                    </p>
+                    <h6>
+                        {{res.address}}
+                    </h6>
+                    <h6>{{res.stars}} stars</h6>
+                </div>    
+            </li>
+               
+
+        {%endfor%}
+    </ul>
+    {%endblock%}
+
+    {%block recentrated%}
+    <ul>
+        {%for res in best_cuisine%}
+        <li class = "thumbnail">
+            <img src="../static/img/res.png" alt="">
+            <div class =  "info">
+                <p>
+                    {{res.name}}&nbsp;
+                    
+                </p>
+                <h6>
+                    {{res.address}}
+                </h6>
+                <h6>{{res.stars}} stars</h6>
+            </div>    
+        </li>     
+        {%endfor%}
+    </ul>
+    {%endblock%}
+{%endif%}

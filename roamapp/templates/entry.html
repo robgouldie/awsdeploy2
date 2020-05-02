@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Candal|Suez+One&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header class = "img-container">
+            <section class = "inner-container">
+                <h1>ROAM</h1>
+                <h2>YOUR FAVOURITE RESTAURANTS 
+                    <br/>YOU'VE NEVER HEARD OF</h2>
+                    {%if reentering%}
+                        {%block bodylog%}{%endblock%}
+                    {%endif%}
+                    {%if entering%}
+                        {%block bodyreg%}{%endblock%}
+                    {%endif%}
+
+            </section>
+        </header>
+
+        
+    </body>
+</html>
